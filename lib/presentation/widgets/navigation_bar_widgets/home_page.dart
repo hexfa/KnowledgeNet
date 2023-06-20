@@ -9,8 +9,9 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorManager.black,
-      body: const Text(
-        'HomePage'
+      body: Text(
+        'HomePage',
+        style: Theme.of(context).textTheme.bodyText1,
       ),
     );
   }

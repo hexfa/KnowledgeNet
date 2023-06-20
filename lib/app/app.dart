@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:learning_management_system/presentation/bottom_navigation/navigation_cubit.dart';
 import 'package:learning_management_system/presentation/bottom_navigation/navigation_screen.dart';
+import 'package:learning_management_system/presentation/resources/theme_manager.dart';
 
 
 
@@ -22,9 +23,11 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return BlocProvider<NavigationCubit>(
       create: (context) => NavigationCubit(),
-      child: const MaterialApp(
-      debugShowCheckedModeBanner: false,
-        home: NavigationScreen(),),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: getApplicationTheme(),
+        home: const NavigationScreen(),
+      ),
     );
   }
 }

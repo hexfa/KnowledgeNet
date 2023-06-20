@@ -14,6 +14,7 @@ import 'navigation_state.dart';
 import 'navigation_cubit.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+
 class NavigationScreen extends StatefulWidget {
   const NavigationScreen({Key? key}) : super(key: key);
 
@@ -22,11 +23,10 @@ class NavigationScreen extends StatefulWidget {
 }
 
 class _NavigationScreenState extends State<NavigationScreen> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-      ),
       bottomNavigationBar: BlocBuilder<NavigationCubit,NavigationState>(
         builder: (context,state){
           return BottomNavigationBar(
@@ -37,51 +37,53 @@ class _NavigationScreenState extends State<NavigationScreen> {
               selectedFontSize: AppSize.s14,
               unselectedFontSize: AppSize.s14,
               currentIndex: state.index,
-              showUnselectedLabels: false,
+              showUnselectedLabels: true,
+              unselectedLabelStyle: Theme.of(context).bottomNavigationBarTheme.unselectedLabelStyle,
+              selectedLabelStyle: Theme.of(context).bottomNavigationBarTheme.selectedLabelStyle,
             items: [
               BottomNavigationBarItem(
                   icon: SvgPicture.asset(
-                      IconAssets.homeLight,
-                      color: ColorManager.white,
-                      width: AppSize.s30,
-                      height: AppSize.s30,
+                    IconAssets.homeLight,
+                    color: ColorManager.white,
+                    width: AppSize.s30,
+                    height: AppSize.s30,
                   ),
-                label: AppString.home,
-                activeIcon: SvgPicture.asset(
-                  IconAssets.home,
-                  color: ColorManager.white,
-                  width: AppSize.s40,
-                  height: AppSize.s40,
-                ),
+                  label: AppString.home,
+                  activeIcon: SvgPicture.asset(
+                    IconAssets.home,
+                    color: ColorManager.white,
+                    width: AppSize.s30,
+                    height: AppSize.s30,
+                  ),
               ),
               BottomNavigationBarItem(
-                icon:SvgPicture.asset(
+                icon: SvgPicture.asset(
                   IconAssets.searchLight,
+                  color: ColorManager.white,
                   width: AppSize.s30,
                   height: AppSize.s30,
-                  color: ColorManager.white,
                 ),
                 label: AppString.explore,
                 activeIcon: SvgPicture.asset(
                   IconAssets.search,
                   color: ColorManager.white,
-                  width: AppSize.s40,
-                  height: AppSize.s40,
+                  width: AppSize.s30,
+                  height: AppSize.s30,
                 ),
               ),
               BottomNavigationBarItem(
                 icon: SvgPicture.asset(
                   IconAssets.videoPlayerLight,
                   color: ColorManager.white,
-                  width: AppSize.s40,
-                  height: AppSize.s40,
+                  width: AppSize.s30,
+                  height: AppSize.s30,
                 ),
                 label: AppString.myLearning,
                 activeIcon: SvgPicture.asset(
                   IconAssets.videoPlayer,
                   color: ColorManager.white,
-                  width: AppSize.s45,
-                  height: AppSize.s45,
+                  width: AppSize.s30,
+                  height: AppSize.s30,
                 ),
               ),
               BottomNavigationBarItem(
@@ -95,8 +97,8 @@ class _NavigationScreenState extends State<NavigationScreen> {
                 activeIcon: SvgPicture.asset(
                   IconAssets.favourite,
                   color: ColorManager.white,
-                  width: AppSize.s40,
-                  height: AppSize.s40,
+                  width: AppSize.s30,
+                  height: AppSize.s30,
                 ),
               ),
               BottomNavigationBarItem(
@@ -110,8 +112,8 @@ class _NavigationScreenState extends State<NavigationScreen> {
                 activeIcon: SvgPicture.asset(
                   IconAssets.account,
                   color: ColorManager.white,
-                  width: AppSize.s40,
-                  height: AppSize.s40,
+                  width: AppSize.s30,
+                  height: AppSize.s30,
                 ),
               ),
             ],
