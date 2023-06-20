@@ -7,7 +7,7 @@ import 'package:learning_management_system/presentation/widgets/navigation_bar_w
 import 'package:learning_management_system/presentation/widgets/navigation_bar_widgets/home_page.dart';
 import 'package:learning_management_system/presentation/widgets/navigation_bar_widgets/my_learning.dart';
 import 'package:learning_management_system/presentation/widgets/navigation_bar_widgets/wishlist.dart';
-import '../resources/icon_manager.dart';
+import '../resources/assets_manager.dart';
 import '../resources/string_manager.dart';
 import '../resources/values_manager.dart';
 import 'navigation_state.dart';
@@ -43,14 +43,14 @@ class _NavigationScreenState extends State<NavigationScreen> {
             items: [
               BottomNavigationBarItem(
                   icon: SvgPicture.asset(
-                    IconAssets.homeLight,
+                    IconManagerAssets.homeLight,
                     color: ColorManager.white,
                     width: AppSize.s30,
                     height: AppSize.s30,
                   ),
-                  label: AppString.home,
+                  label: AppStringNavigationBar.home,
                   activeIcon: SvgPicture.asset(
-                    IconAssets.home,
+                    IconManagerAssets.home,
                     color: ColorManager.white,
                     width: AppSize.s30,
                     height: AppSize.s30,
@@ -58,14 +58,14 @@ class _NavigationScreenState extends State<NavigationScreen> {
               ),
               BottomNavigationBarItem(
                 icon: SvgPicture.asset(
-                  IconAssets.searchLight,
+                  IconManagerAssets.searchLight,
                   color: ColorManager.white,
                   width: AppSize.s30,
                   height: AppSize.s30,
                 ),
-                label: AppString.explore,
+                label: AppStringNavigationBar.explore,
                 activeIcon: SvgPicture.asset(
-                  IconAssets.search,
+                  IconManagerAssets.search,
                   color: ColorManager.white,
                   width: AppSize.s30,
                   height: AppSize.s30,
@@ -73,14 +73,14 @@ class _NavigationScreenState extends State<NavigationScreen> {
               ),
               BottomNavigationBarItem(
                 icon: SvgPicture.asset(
-                  IconAssets.videoPlayerLight,
+                  IconManagerAssets.videoPlayerLight,
                   color: ColorManager.white,
                   width: AppSize.s30,
                   height: AppSize.s30,
                 ),
-                label: AppString.myLearning,
+                label: AppStringNavigationBar.myLearning,
                 activeIcon: SvgPicture.asset(
-                  IconAssets.videoPlayer,
+                  IconManagerAssets.videoPlayer,
                   color: ColorManager.white,
                   width: AppSize.s30,
                   height: AppSize.s30,
@@ -88,14 +88,14 @@ class _NavigationScreenState extends State<NavigationScreen> {
               ),
               BottomNavigationBarItem(
                 icon: SvgPicture.asset(
-                  IconAssets.favouriteLight,
+                  IconManagerAssets.favouriteLight,
                   color: ColorManager.white,
                   width: AppSize.s30,
                   height: AppSize.s30,
                 ),
-                label: AppString.wishlist,
+                label: AppStringNavigationBar.wishlist,
                 activeIcon: SvgPicture.asset(
-                  IconAssets.favourite,
+                  IconManagerAssets.favourite,
                   color: ColorManager.white,
                   width: AppSize.s30,
                   height: AppSize.s30,
@@ -103,14 +103,14 @@ class _NavigationScreenState extends State<NavigationScreen> {
               ),
               BottomNavigationBarItem(
                 icon: SvgPicture.asset(
-                  IconAssets.accountLight,
+                  IconManagerAssets.accountLight,
                   color: ColorManager.white,
                   width: AppSize.s30,
                   height: AppSize.s30,
                 ),
-                label: AppString.account,
+                label: AppStringNavigationBar.account,
                 activeIcon: SvgPicture.asset(
-                  IconAssets.account,
+                  IconManagerAssets.account,
                   color: ColorManager.white,
                   width: AppSize.s30,
                   height: AppSize.s30,

@@ -4,6 +4,8 @@ import 'package:learning_management_system/presentation/bottom_navigation/naviga
 import 'package:learning_management_system/presentation/bottom_navigation/navigation_screen.dart';
 import 'package:learning_management_system/presentation/resources/theme_manager.dart';
 
+import '../presentation/resources/route_manager.dart';
+
 
 
 class MyApp extends StatefulWidget {// default constructor
@@ -26,6 +28,8 @@ class _MyAppState extends State<MyApp> {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: getApplicationTheme(),
+        onGenerateRoute: RouteGenerator.getRoute,
+        initialRoute: Routes.navigationBar,
         home: const NavigationScreen(),
       ),
     );
