@@ -13,8 +13,8 @@ ThemeData getApplicationTheme(){
       button: getSemiBoldStyle(fontSize: AppSize.s16, color: ColorManager.black),
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      selectedLabelStyle: getRegularStyle(fontSize: AppSize.s14, color: ColorManager.white),
-      unselectedLabelStyle: getRegularStyle(fontSize: AppSize.s14,color: ColorManager.whiteWhitOpacity60)
+      selectedLabelStyle: getRegularStyle(fontSize: AppSize.s14, color: ColorManager.lightBlue1),
+      unselectedLabelStyle: getRegularStyle(fontSize: AppSize.s14,color: ColorManager.lightGrey)
     ),
     appBarTheme: AppBarTheme(
       titleTextStyle: getSemiBoldStyle(fontSize: AppSize.s18, color: ColorManager.white),
