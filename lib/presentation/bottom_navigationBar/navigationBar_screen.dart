@@ -9,11 +9,11 @@ class NavigationBarScreen extends StatelessWidget {
   const NavigationBarScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final navigationBarItems = Provider.of<NavigationBarProvider>(context);
-    return Scaffold(
-      bottomNavigationBar: Consumer<NavigationBarProvider>(
-        builder: (context,navigationBarItems,child){
-          return BottomNavigationBar(
+    print('ffff');
+    return Consumer<NavigationBarProvider>(
+      builder: (context,navigationBarItems,_){
+        return Scaffold(
+            bottomNavigationBar: BottomNavigationBar(
               type: BottomNavigationBarType.fixed,
               backgroundColor: ColorManager.black,
               unselectedItemColor: ColorManager.lightGrey,
@@ -24,14 +24,14 @@ class NavigationBarScreen extends StatelessWidget {
               currentIndex: navigationBarItems.selectedIndex,
               unselectedLabelStyle: Theme.of(context).bottomNavigationBarTheme.unselectedLabelStyle,
               selectedLabelStyle: Theme.of(context).bottomNavigationBarTheme.selectedLabelStyle,
-            items: navigationBarItems.bottomNavigationBarItems,
-            onTap: (value){
-              navigationBarItems.isSelectedIndex(value);
-            },
-          );
-        },
-      ),
-      body: navigationBarItems.bottomNavigationBarWidget[navigationBarItems.selectedIndex],
+              items: navigationBarItems.bottomNavigationBarItems,
+              onTap: (value){
+                navigationBarItems.isSelectedIndex(value);
+              },
+            ),
+          body: navigationBarItems.bottomNavigationBarWidget[navigationBarItems.selectedIndex],
+        );
+      }
     );
   }
 }

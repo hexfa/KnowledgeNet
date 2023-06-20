@@ -3,15 +3,15 @@ import '../../../presentation/resources/color_manager.dart';
 import '../../../presentation/resources/string_manager.dart';
 import '../../../presentation/resources/values_manager.dart';
 import '../../../presentation/widgets/navigationBar_widgets/account.dart';
-import '../../../presentation/widgets/navigationBar_widgets/home_page.dart';
+import '../../../presentation/widgets/navigationBar_widgets/home_page/screens/home_page.dart';
 import '../../../presentation/widgets/navigationBar_widgets/my_learning.dart';
 import '../../../presentation/widgets/widgets.dart';
 
 class NavigationBarProvider with ChangeNotifier{
   final List<BottomNavigationBarItem> _bottomNavigationBarItems = [
-    customNavigationBar(color: ColorManager.lightGrey, activeColor: ColorManager.lightBlue1, iconSize: AppSize.s30, labelText: AppStringNavigationBar.explore, icon: CupertinoIcons.search, activeIcon: CupertinoIcons.search),
-    customNavigationBar(color: ColorManager.lightGrey, activeColor: ColorManager.lightBlue1, iconSize: AppSize.s30, labelText: AppStringNavigationBar.myLearning, icon: CupertinoIcons.play_circle, activeIcon: CupertinoIcons.play_circle),
-    customNavigationBar(color: ColorManager.lightGrey, activeColor: ColorManager.lightBlue1, iconSize: AppSize.s30,labelText: AppStringNavigationBar.account, icon: CupertinoIcons.person_alt_circle, activeIcon: CupertinoIcons.person_alt_circle),
+    customNavigationBar(color: ColorManager.lightGrey, activeColor: ColorManager.lightBlue1, iconSize: AppSize.s28, labelText: AppStringNavigationBar.explore, icon: CupertinoIcons.search, activeIcon: CupertinoIcons.search),
+    customNavigationBar(color: ColorManager.lightGrey, activeColor: ColorManager.lightBlue1, iconSize: AppSize.s28, labelText: AppStringNavigationBar.myLearning, icon: CupertinoIcons.play_circle, activeIcon: CupertinoIcons.play_circle),
+    customNavigationBar(color: ColorManager.lightGrey, activeColor: ColorManager.lightBlue1, iconSize: AppSize.s28,labelText: AppStringNavigationBar.account, icon: CupertinoIcons.person_alt_circle, activeIcon: CupertinoIcons.person_alt_circle),
   ];
 
   List<BottomNavigationBarItem> get bottomNavigationBarItems => _bottomNavigationBarItems;

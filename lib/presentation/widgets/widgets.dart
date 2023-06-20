@@ -2,6 +2,9 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:learning_management_system/presentation/resources/values_manager.dart';
 
+import '../resources/color_manager.dart';
+import '../resources/string_manager.dart';
+
 Widget glassButton(
     {
       required Widget child,
@@ -50,5 +53,21 @@ BottomNavigationBarItem customNavigationBar(
       color: activeColor,
       size: iconSize,
     ),
+  );
+}
+
+Widget signInElevatedButton({required Function onPressed, required BuildContext context}){
+  return ElevatedButton(
+      onPressed: () => onPressed,
+      style: ElevatedButton.styleFrom(
+        backgroundColor: ColorManager.white,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(AppSize.s0)
+        )
+      ),
+      child: Text(
+          AppStringSignUp.signInButtonText,
+        style: Theme.of(context).textTheme.button,
+      ),
   );
 }

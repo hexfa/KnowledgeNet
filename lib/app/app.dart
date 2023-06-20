@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learning_management_system/app/provider/navigationBar/navigationBar_provider.dart';
+import 'package:learning_management_system/app/provider/search/search_provider.dart';
 import 'package:learning_management_system/presentation/resources/theme_manager.dart';
 import 'package:provider/provider.dart';
 import '../presentation/bottom_navigationBar/navigationBar_screen.dart';
@@ -25,6 +26,7 @@ class _MyAppState extends State<MyApp> {
     return MultiProvider(
         providers: [
           ChangeNotifierProvider<NavigationBarProvider>(create: (context) => NavigationBarProvider()),
+          ChangeNotifierProvider<SearchProvider>(create: (context) => SearchProvider()),
         ],
         child: MaterialApp(
           debugShowCheckedModeBanner: false,

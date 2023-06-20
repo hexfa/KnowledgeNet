@@ -12,10 +12,20 @@ class AppStringNoRouteFound{
 }
 
 
+// HomePage
+class AppStringHomePage{
+  static const String headerText = 'Explore';
+  static const String hintSearchBarText = 'What do you want to learn?';
+  static const String categoriesText = 'Categories';
+  static const String seeAllText = 'See All';
+
+}
+
+
 // SignUp
 class AppStringSignUp{
   static const String headerText = 'Sign Up to Learning Management System';
-  static const String signInButtonText = 'Get Sign in';
-  static const String signUpButtonText = 'Get Sign up';
+  static const String signInButtonText = 'Sign in';
+  static const String signUpButtonText = 'Sign up';
 
 }

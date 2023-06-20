@@ -5,11 +5,12 @@ import 'app/app.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    statusBarColor: ColorManager.primary,
-    statusBarIconBrightness: Brightness.dark,
+    statusBarColor: ColorManager.black,
+    statusBarIconBrightness: Brightness.light,
     systemNavigationBarColor: ColorManager.black,
     systemNavigationBarIconBrightness: Brightness.light
   ),
   );
-  runApp( MyApp());
+  runApp(MyApp());
 }
+
