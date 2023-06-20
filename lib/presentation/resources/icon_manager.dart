@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 
-class AppIcon{
-  // Navigation bar Icons
-  static const IconData home = Icons.home_outlined;
-  static const IconData explore = Icons.search_outlined;
-  static const IconData myLearning = Icons.slow_motion_video_outlined;
-  static const IconData wishlist = Icons.favorite_border_outlined;
-  static const IconData account = Icons.account_circle_outlined;
-
-  // Navigation bar ActivationIcon
-  static const IconData homeActive = Icons.home;
-  static const IconData exploreActive = Icons.search;
-  static const IconData myLearningActive = Icons.slow_motion_video;
-  static const IconData wishlistActive = Icons.favorite_border;
-  static const IconData accountActive = Icons.account_circle;
+const String navigationIconPath = 'assets/icons/navigation_bar_icons';
+class IconAssets{
+  static const String home = '$navigationIconPath/home.svg';
+  static const String homeLight = '$navigationIconPath/home_outline.svg';
+  static const String search = '$navigationIconPath/search.svg';
+  static const String searchLight = '$navigationIconPath/search_outline.svg';
+  static const String videoPlayer = '$navigationIconPath/video_player.svg';
+  static const String videoPlayerLight = '$navigationIconPath/video_player_outline.svg';
+  static const String favourite = '$navigationIconPath/favourite.svg';
+  static const String favouriteLight = '$navigationIconPath/favorite_outline.svg';
+  static const String account = '$navigationIconPath/account.svg';
+  static const String accountLight = '$navigationIconPath/account_outline.svg';
 }

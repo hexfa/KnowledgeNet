@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 
+import '../../resources/color_manager.dart';
+
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Text(
+    return Scaffold(
+      backgroundColor: ColorManager.black,
+      body: const Text(
         'HomePage'
       ),
     );

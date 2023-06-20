@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:learning_management_system/presentation/bottom_navigation/navigation_cubit.dart';
+import 'package:learning_management_system/presentation/bottom_navigation/navigation_screen.dart';
 
 
 
@@ -17,8 +20,11 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return BlocProvider<NavigationCubit>(
+      create: (context) => NavigationCubit(),
+      child: const MaterialApp(
       debugShowCheckedModeBanner: false,
+        home: NavigationScreen(),),
     );
   }
 }

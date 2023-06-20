@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:learning_management_system/presentation/constants/navigation_bar_items.dart';
+import 'package:learning_management_system/presentation/resources/color_manager.dart';
 import 'package:learning_management_system/presentation/widgets/navigation_bar_widgets/account.dart';
 import 'package:learning_management_system/presentation/widgets/navigation_bar_widgets/explore.dart';
 import 'package:learning_management_system/presentation/widgets/navigation_bar_widgets/home_page.dart';
@@ -8,8 +9,10 @@ import 'package:learning_management_system/presentation/widgets/navigation_bar_w
 import 'package:learning_management_system/presentation/widgets/navigation_bar_widgets/wishlist.dart';
 import '../resources/icon_manager.dart';
 import '../resources/string_manager.dart';
+import '../resources/values_manager.dart';
 import 'navigation_state.dart';
 import 'navigation_cubit.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class NavigationScreen extends StatefulWidget {
   const NavigationScreen({Key? key}) : super(key: key);
@@ -27,38 +30,89 @@ class _NavigationScreenState extends State<NavigationScreen> {
       bottomNavigationBar: BlocBuilder<NavigationCubit,NavigationState>(
         builder: (context,state){
           return BottomNavigationBar(
+              type: BottomNavigationBarType.fixed,
+              backgroundColor: ColorManager.black,
+              unselectedItemColor: ColorManager.whiteWhitOpacity60,
+              selectedItemColor: ColorManager.white,
+              selectedFontSize: AppSize.s14,
+              unselectedFontSize: AppSize.s14,
               currentIndex: state.index,
               showUnselectedLabels: false,
-            items: const [
+            items: [
               BottomNavigationBarItem(
-                  icon: Icon(
-                    AppIcon.home,
+                  icon: SvgPicture.asset(
+                      IconAssets.homeLight,
+                      color: ColorManager.white,
+                      width: AppSize.s30,
+                      height: AppSize.s30,
                   ),
                 label: AppString.home,
+                activeIcon: SvgPicture.asset(
+                  IconAssets.home,
+                  color: ColorManager.white,
+                  width: AppSize.s40,
+                  height: AppSize.s40,
+                ),
               ),
               BottomNavigationBarItem(
-                icon: Icon(
-                  AppIcon.explore,
+                icon:SvgPicture.asset(
+                  IconAssets.searchLight,
+                  width: AppSize.s30,
+                  height: AppSize.s30,
+                  color: ColorManager.white,
                 ),
                 label: AppString.explore,
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(
-                  AppIcon.myLearning,
+                activeIcon: SvgPicture.asset(
+                  IconAssets.search,
+                  color: ColorManager.white,
+                  width: AppSize.s40,
+                  height: AppSize.s40,
                 ),
-                label: AppString.home,
               ),
               BottomNavigationBarItem(
-                icon: Icon(
-                  AppIcon.wishlist,
+                icon: SvgPicture.asset(
+                  IconAssets.videoPlayerLight,
+                  color: ColorManager.white,
+                  width: AppSize.s40,
+                  height: AppSize.s40,
+                ),
+                label: AppString.myLearning,
+                activeIcon: SvgPicture.asset(
+                  IconAssets.videoPlayer,
+                  color: ColorManager.white,
+                  width: AppSize.s45,
+                  height: AppSize.s45,
+                ),
+              ),
+              BottomNavigationBarItem(
+                icon: SvgPicture.asset(
+                  IconAssets.favouriteLight,
+                  color: ColorManager.white,
+                  width: AppSize.s30,
+                  height: AppSize.s30,
                 ),
                 label: AppString.wishlist,
+                activeIcon: SvgPicture.asset(
+                  IconAssets.favourite,
+                  color: ColorManager.white,
+                  width: AppSize.s40,
+                  height: AppSize.s40,
+                ),
               ),
               BottomNavigationBarItem(
-                icon: Icon(
-                  AppIcon.account,
+                icon: SvgPicture.asset(
+                  IconAssets.accountLight,
+                  color: ColorManager.white,
+                  width: AppSize.s30,
+                  height: AppSize.s30,
                 ),
                 label: AppString.account,
+                activeIcon: SvgPicture.asset(
+                  IconAssets.account,
+                  color: ColorManager.white,
+                  width: AppSize.s40,
+                  height: AppSize.s40,
+                ),
               ),
             ],
             onTap: (index){
